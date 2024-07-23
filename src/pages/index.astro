@@ -7,6 +7,7 @@ import SocialPill from "../components/SocialPill.astro";
 import Layout from "../layouts/Layout.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import Experience from "../components/Experience.astro";
+import BriefIcon from "../components/icons/BriefIcon.astro";
 ---
 
 <Layout title="Portafolio de Nath-Maya - Desarrolladora y programadora">
@@ -45,7 +46,7 @@ import Experience from "../components/Experience.astro";
         </SocialPill>
         <SocialPill href="mailto:natha.maya.ramirez93@gmail.com">
           <GmailIcon class="size-4" />
-          Correo
+          natha.maya.ramirez93@gmail.com
         </SocialPill>
         <SocialPill href="https://wa.me/573208087762">
           <WhatsappIcon class="size-4" />
@@ -53,10 +54,11 @@ import Experience from "../components/Experience.astro";
         </SocialPill>
       </nav>
     </SectionContainer>
-    <SectionContainer>
-      <h1 class="text-white text-4xl fond-bold flex justify-center flex-row gap-x-3 pb-4">
+    <SectionContainer id="experiencia">
+      <h2 class="text-2xl font-semibold mb-6 flex gap-2 items-center">
+        <BriefIcon class="size-6"/>
         Work Experience
-      </h1>
+      </h2>
       <Experience/>
     </SectionContainer>
 
