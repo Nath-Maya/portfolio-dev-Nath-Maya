@@ -5,11 +5,13 @@ import LinkedinIcon from "../components/icons/LinkedinIcon.astro";
 import WhatsappIcon from "../components/icons/WhatsappIcon.astro";
 import SocialPill from "../components/SocialPill.astro";
 import Layout from "../layouts/Layout.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import Experience from "../components/Experience.astro";
 ---
 
-<Layout title="Portfolio Nath-Maya - Desarrolladora y programadora">
+<Layout title="Portafolio de Nath-Maya - Desarrolladora y programadora">
   <main>
-    <section class="w-full mx-auto lg:w-[740px] py-44">
+    <SectionContainer>
       <h1
         class="text-white text-5xl fond-bold flex justify-center flex-row gap-x-3 pb-5"
       >
@@ -33,23 +35,30 @@ import Layout from "../layouts/Layout.astro";
         incesante y una dedicación al aprendizaje continuo.
       </h2>
       <nav class="flex gap-x-4 justify-center">
-        <SocialPill>
-          <LinkedinIcon class="w-6 h-6" />
+        <SocialPill href="https://www.linkedin.com/in/nathalia-maya-814245119/">
+          <LinkedinIcon class="size-4" />
           Linkedin
         </SocialPill>
-        <SocialPill>
-          <GithubIcon class="w-6 h-6" />
+        <SocialPill href="https://github.com/Nath-Maya">
+          <GithubIcon class="size-4" />
           Github
         </SocialPill>
-        <SocialPill>
-          <GmailIcon class="w-6 h-6" />
+        <SocialPill href="mailto:natha.maya.ramirez93@gmail.com">
+          <GmailIcon class="size-4" />
           Correo
         </SocialPill>
-        <SocialPill>
-          <WhatsappIcon class="w-6 h-6" />
+        <SocialPill href="https://wa.me/573208087762">
+          <WhatsappIcon class="size-4" />
           Whatsapp
         </SocialPill>
       </nav>
-    </section>
+    </SectionContainer>
+    <SectionContainer>
+      <h1 class="text-white text-4xl fond-bold flex justify-center flex-row gap-x-3 pb-4">
+        Work Experience
+      </h1>
+      <Experience/>
+    </SectionContainer>
+
   </main>
 </Layout>

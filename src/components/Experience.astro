@@ -1,0 +1,34 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+
+const EXPERIENCE = [
+  {
+    date: "2019 - Junio 2024",
+    title: "Analista de Planeación & Desarrollo",
+    description:
+      "Implementación y parametrización del software Crisol Web (ERP). Participación activa con el equipo de innovación en la implementación del sistema de CRM Odoo para optimizar tiempos en registros y trazabilidad de los procesos. Elaboración de componentes garantizando funcionalidad. Administración y desarrollo de Base de datos relacionales. Implementación de nuevas funciones en los módulos. Control de usuarios en los aplicativos. Análisis de datos e indicadores de gestión, elaboración de Dashboards para agilizar la toma de decisiones en el equipo.",
+  },
+  {
+    date: "2015 - 2019",
+    title: "Analista Técnica de Color - Tintas offset",
+    description:
+      "Gestión de inventario y suministro al área de producción de la materia prima requerida bajo una orden de pedido. Control de calidad de las tintas de impresión cumpliendo con los estándares de modelos de espacio de color establecidos.",
+  },
+  {
+    date: "2015 - 2019",
+    title: "Auxiliar de impresión Offset",
+    description:
+      "Pre-alistamiento de elementos necesarios para la puesta a punto de la máquina de impresión. Apoyar al operario de impresión en la resolución de problemas presentados durante el proceso productivo. Soporte durante el proceso productivo para garantizar la calidad del producto impreso.",
+  },
+];
+---
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700">
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="mb-10 ms-4">
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>
