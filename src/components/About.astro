@@ -1,0 +1,19 @@
+---
+import Carousel from "./Carousel.astro";
+
+const aboutText = `
+
+ Soy una persona jovial y amante de la naturaleza, apasionada por el deporte y con cualidades artísticas que estimulan mi creatividad.  Disfruto leer tanto contenido literario como técnico, ambos con el fin de encontrar un cimiento robusto a nivel personal y profesional. 
+
+  En mi vida profesional he desarrollado habilidades en análisis y optimización de procesos. Me apasiona encontrar maneras más eficientes y menos tediosas de realizar tareas, siempre con el objetivo de beneficiar al equipo. Dirijo mis esfuerzos en optimizar recursos para impactar positivamente las partes interesadas. Estas habilidades las logro llevar a otro nivel, en la programación y desarrollo. De allí surge mi ímpetu por seguir creciendo en este campo. 
+
+`;
+---
+
+<section class="bg-gray-900 text-gray-100 p-8 rounded-lg shadow-lg">
+  <h2 class="text-3xl font-bold text-white mb-4">Un poco sobre mí...</h2>
+  <p class="text-gray-300 leading-relaxed whitespace-pre-line">
+    {aboutText}
+  </p>
+  <Carousel/>
+</section>
