@@ -1,4 +1,7 @@
 ---
+import GithubIcon from "./icons/GithubIcon.astro";
+import WindownIcon from "./icons/WindownIcon.astro";
+import DeviceIcon from "./icons/DeviceIcon.astro";
 import Angular from "./tags/Angular.astro";
 import Bootstrap from "./tags/Bootstrap.astro";
 import Css from "./tags/Css.astro";
@@ -82,15 +85,17 @@ const TAGS = {
 const PROJECTS = [
   {
     title: "Ecommerce Wonder Bike",
-    description: "En este proyecto, los usuarios pueden explorar una variedad de productos y agregar sus artículos favoritos al carrito de compras. El sitio proporciona una vista detallada de cada producto, incluyendo precios y descripciones. Los clientes pueden ver un resumen de su carrito, con un desglose completo de los precios y el total de su compra, lo que facilita una experiencia de compra sencilla y transparente. El flujo termina en la generación del checkout la cual se puede enviar al correo.",
-    link: "e-commerce-react-wonderbike.vercel.app",
+    description:
+      "En este proyecto, los usuarios pueden explorar una variedad de productos y agregar sus artículos favoritos al carrito de compras. El sitio proporciona una vista detallada de cada producto, incluyendo precios y descripciones. Los clientes pueden ver un resumen de su carrito, con un desglose completo de los precios y el total de su compra, lo que facilita una experiencia de compra sencilla y transparente. El flujo termina en la generación del checkout la cual se puede enviar al correo.",
+    link: "https://e-commerce-react-wonderbike.vercel.app/",
     github: "https://github.com/Nath-Maya/ecommerce-React.git",
     image: "/src/assets/img/projects/ecommerce-react.png",
     tags: [TAGS.React, TAGS.Bootstrap, TAGS.Firebase],
   },
   {
     title: "ToDo",
-    description: "ToDo App es una aplicación simple para gestionar tareas. Permite a los usuarios agregar, editar, eliminar y marcar tareas como completadas. Esta aplicación está construida con Angular y utiliza Firebase para el almacenamiento de datos y el hosting.",
+    description:
+      "ToDo App es una aplicación simple para gestionar tareas. Permite a los usuarios agregar, editar, eliminar y marcar tareas como completadas. Esta aplicación está construida con Angular y utiliza Firebase para el almacenamiento de datos y el hosting.",
     link: "https://todo-angular-83658.web.app/home",
     github: "https://github.com/Nath-Maya/toDo-App.git",
     image: "/src/assets/img/projects/toDo.png",
@@ -101,12 +106,10 @@ const PROJECTS = [
 
 {
   (
-    <div class="flex flex-col gap-y-16">
+    <div class="flex flex-col gap-y-14">
       {PROJECTS.map(({ image, title, description, tags, link, github }) => (
         <article>
-          <h3 class="text-xl text-lime-400 dark:text-gray-100">
-            {title}
-          </h3>
+          <h3 class="text-xl text-lime-400 dark:text-gray-100">{title}</h3>
           <p class="my-3 text-justify"> {description}</p>
           <ul class="flex flex-row mb-2 gap-x-2">
             {tags.map((tag) => (
@@ -120,7 +123,25 @@ const PROJECTS = [
               </li>
             ))}
           </ul>
-          <img class="rounded shadow-2xl shadow-white/10 size-8/12" src={image} alt={`Captura de pantalla del proyecto ${image}`}>
+          <img
+            class="rounded shadow-2xl shadow-white/10 size-8/12"
+            src={image}
+            alt={`Captura de pantalla del proyecto ${image}`}
+          />
+          <div class="pt-3">
+            <span class="bg-gray-100 text-gray-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded me-2 dark:bg-gray-700 dark:text-gray-400 border border-gray-500 ">
+              <WindownIcon class="size-5" />
+              <a class="p-1" href={link} target="_blank">
+                Preview
+              </a>
+            </span>
+            <span class="bg-gray-100 text-gray-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded me-2 dark:bg-gray-700 dark:text-gray-400 border border-gray-500 ">
+              <DeviceIcon class="size-5" />
+              <a class="p-1" href={github} target="_blank">
+                Code
+              </a>
+            </span>
+          </div>
         </article>
       ))}
     </div>
