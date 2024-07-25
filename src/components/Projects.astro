@@ -81,11 +81,11 @@ const TAGS = {
 
 const PROJECTS = [
   {
-    title: "Proyecto 1",
-    description: "Loremp ipsum",
+    title: "Ecommerce Wonder Bike",
+    description: "En este proyecto, los usuarios pueden explorar una variedad de productos y agregar sus artículos favoritos al carrito de compras. El sitio proporciona una vista detallada de cada producto, incluyendo precios y descripciones. Los clientes pueden ver un resumen de su carrito, con un desglose completo de los precios y el total de su compra, lo que facilita una experiencia de compra sencilla y transparente. El flujo termina en la generación del checkout la cual se puede enviar al correo.",
     link: "e-commerce-react-wonderbike.vercel.app",
     github: "https://github.com/Nath-Maya/ecommerce-React.git",
-    image: "/src/assets/img/projects/ecommerce-react.webp",
+    image: "/src/assets/img/projects/ecommerce-react.png",
     tags: [TAGS.React, TAGS.Bootstrap, TAGS.Firebase],
   },
 ];
@@ -96,10 +96,10 @@ const PROJECTS = [
     <div class="flex flex-col gap-y-16">
       {PROJECTS.map(({ image, title, description, tags, link, github }) => (
         <article>
-          <h3 class="text-xl text-sky-500 dark:text-gray-100">
+          <h3 class="text-xl text-lime-400 dark:text-gray-100">
             {title}
           </h3>
-          <p> {description}</p>
+          <p class="my-3 text-justify"> {description}</p>
           <ul class="flex flex-row mb-2 gap-x-2">
             {tags.map((tag) => (
               <li>
